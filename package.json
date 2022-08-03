@@ -1,0 +1,21 @@
+{
+  "name": "employees-backend",
+  "version": "1.0.0",
+  "description": "Reference solution of Employees API",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon server.js"
+  },
+  "author": "Mykhailo Dorokhov",
+  "license": "ISC",
+  "dependencies": {
+    "knex": "^2.2.0",
+    "koa": "^2.13.4",
+    "koa-bodyparser": "^4.3.0",
+    "koa-joi-router": "^8.0.0",
+    "mysql2": "^2.3.3"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.19"
+  }
+}
