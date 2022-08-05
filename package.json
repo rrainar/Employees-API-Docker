@@ -4,7 +4,14 @@
   "description": "Reference solution of Employees API",
   "main": "server.js",
   "scripts": {
-    "start": "nodemon server.js"
+    "dev": "nodemon server.js",
+    "start": "node server.js",
+    "db-create": "node db/scripts/create.js",
+    "db-migrate": "node db/scripts/migrate.js",
+    "db-seed": "node db/scripts/seed.js",
+    "db-drop": "node db/scripts/drop.js",
+    "db-setup": "npm run db-create && npm run db-migrate && npm run db-seed",
+    "restart": "docker compose build && docker compose up"
   },
   "author": "Mykhailo Dorokhov",
   "license": "ISC",
@@ -13,9 +20,12 @@
     "knex": "^2.2.0",
     "koa": "^2.13.4",
     "koa-bodyparser": "^4.3.0",
-    "mysql2": "^2.3.3"
+    "koa-logger": "^3.2.1",
+    "mysql2": "^2.3.3",
+    "redis": "^4.2.0"
   },
   "devDependencies": {
+    "node-fetch": "^2.6.7",
     "nodemon": "^2.0.19"
   }
 }
